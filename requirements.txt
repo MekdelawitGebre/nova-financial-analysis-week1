@@ -24,3 +24,8 @@ jupyter>=1.0.0
 ipykernel>=6.20.0
 tqdm>=4.65.0       # For progress bars during long loops
 python-dotenv>=1.0.0
+
+#Test
+pytest
+pytest-cov
+
