@@ -1,0 +1,23 @@
+# Data processing
+pandas
+numpy
+
+# Technical analysis
+TA-Lib
+pynance
+
+# Sentiment analysis
+textblob
+nltk
+
+# Visualization
+matplotlib
+seaborn
+
+
+# for datetime handling
+python-dateutil
+
+pytestpytest
+pytest-cov
+
