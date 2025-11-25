@@ -16,3 +16,6 @@ seaborn
 
 # for datetime handling
 python-dateutil
+
+pytest
+
