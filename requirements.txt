@@ -1,6 +1,7 @@
 # Data processing
 pandas
 numpy
+
 # Technical analysis
 TA-Lib
 pynance
@@ -18,4 +19,5 @@ seaborn
 python-dateutil
 
 pytest
+pytest-cov
 
