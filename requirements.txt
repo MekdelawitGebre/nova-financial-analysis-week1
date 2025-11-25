@@ -18,6 +18,6 @@ seaborn
 # for datetime handling
 python-dateutil
 
-pytestpytest
+pytest
 pytest-cov
 
