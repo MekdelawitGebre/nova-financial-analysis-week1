@@ -1,31 +1,18 @@
-# --- Core Data Science & Analysis ---
-pandas>=2.0.0
-numpy>=1.24.0
-scipy>=1.10.0
-scikit-learn>=1.2.0
+# Data processing
+pandas
+numpy
+# Technical analysis
+TA-Lib
+pynance
 
-# --- Visualization ---
-matplotlib>=3.7.0
-seaborn>=0.12.0
-wordcloud>=1.9.0
-plotly>=5.14.0  # Optional: for interactive stock charts
+# Sentiment analysis
+textblob
+nltk
 
-# --- Natural Language Processing (Task 1 & 3) ---
-nltk>=3.8.1
-textblob>=0.17.1
+# Visualization
+matplotlib
+seaborn
 
-# --- Financial Analysis (Task 2) ---
-yfinance>=0.2.18   # To fetch OHLCV stock data if needed
-pynance>=0.4.0     # Requested in prompt
-TA-Lib>=0.4.24     # Requested in prompt (See note below on installation)
 
-# --- Development & Utilities ---
-jupyter>=1.0.0
-ipykernel>=6.20.0
-tqdm>=4.65.0       # For progress bars during long loops
-python-dotenv>=1.0.0
-
-#Test
-pytest
-pytest-cov
-
+# for datetime handling
+python-dateutil
