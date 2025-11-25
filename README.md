@@ -1,138 +1,118 @@
-Financial Forecasting Refinement through Sentiment Analysis
+# Nova Financial Analysis README
 
-Project Overview
+# Nova Financial Analysis
 
-This project aims to enhance stock market forecasting models by integrating traditional technical analysis with modern Natural Language Processing (NLP) techniques, specifically focusing on financial news sentiment.
+A comprehensive financial analysis project using Python, focused on stock data analysis, technical indicators, and sentiment correlation with stock movements. This project was developed as part of a hands-on data analysis and quantitative finance workflow.
 
-The core objective is to establish a quantifiable link betwee sentiment derived from high-volume financial news headlines and subsequent daily stock returns, thereby creating a more robust and predictive model.
+---
 
-Business Objective
+## Project Structure
 
-The project seeks to answer the question: Can the quantified sentiment score of financial news headlines predict short-term stock price movements (daily returns)?
+```
+nova-financial-analysis-week1/
+│
+├─ data/
+│   ├─ yfinanceData/           # Stock CSV files
+│   └─ newsData/               # News and analyst reports CSV files
+│
+├─ notebooks/
+│   ├─ 01_eda_analysis.ipynb   # Exploratory Data Analysis (EDA)
+│   ├─ 02_quantitative_analysis.ipynb  # Technical indicators & financial metrics
+│   └─ 03_correlation_analysis.ipynb   # Correlation between news sentiment and stock returns
+│
+├─ requirements.txt            # Project dependencies
+└─ README.md
+```
 
-The outcome will be a refined forecasting capability that utilizes both market mechanics (technical indicators) and collective market psychology (news sentiment) for superior predictive performance.
+---
 
-Completed Work & Initial Analysis
+## Installation
 
-The first phase of the project focused on environment establishment and thorough Exploratory Data Analysis (EDA) of the raw news corpus.
+1. **Clone the repository**
 
-1. Environment Setup
+```bash
+git clone https://github.com/MekdelawitGebre/nova-financial-analysis-week1.git
+cd nova-financial-analysis-week1
+```
 
-Version Control: Project initialized on Git/GitHub. All code and dependencies are tracked.
+2. **Create and activate a virtual environment**
 
-Language: Python environment established and dependencies managed.
-
-2. Exploratory Data Analysis (EDA) Findings
-
-Initial analysis of the financial news dataset yielded important insights:
-
-Data Density: A significant portion of publishing activity is concentrated among a few major sources.
-
-Time-Series Trends: Clear patterns of reduced publication frequency during non-trading hours and holidays were observed, which will inform the data alignment process.
-
-Topic Modeling: Unsupervised modeling successfully segmented the news into core, actionable themes (e.g., Earnings, Macro Policy, M&A).
-
-🗺️ Project Roadmap & Next Steps
-
-The project is now moving into the quantitative and integration phase.
-
-Task Category
-
-Key Tasks
-
-Tools/Libraries
-
-Data Integration
-
-1. Compute technical indicators (RSI, MACD, etc.).
-
-TA-Lib, PyNance
-
-
-
-2. Calculate daily stock returns for target tickers.
-
-pandas
-
-Sentiment Analysis
-
-3. Perform sentiment scoring on all news headlines.
-
-[Specific NLP Library/Model]
-
-Validation
-
-4. Align news data and stock data by date (time-lagged alignment).
-
-pandas
-
-
-
-5. Conduct comprehensive correlation analysis between sentiment and returns.
-
-scipy, seaborn
-
-Collaboration
-
-6. Merge all feature branches using Git Pull Requests.
-
-Git/GitHub
-
- Local Setup and Installation
-
-Follow these steps to set up the project environment on your local machine:
-
-Prerequisites
-
-Python 3.8+
-
-Git
-
-1. Clone the Repository
-
-git clone [repository-url]
-cd financial-forecasting-sentiment
-
-
-2. Install Dependencies
-
-It is highly recommended to use a virtual environment (venv or conda).
-
-# Create and activate a virtual environment
+```bash
 python -m venv venv
-source venv/bin/activate  # On Linux/macOS
-# venv\Scripts\activate   # On Windows
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
 
-# Install required Python packages
+3. **Install dependencies**
+
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
+```
 
+---
 
-3. Data Requirements
+## Project Overview
 
-News Data: Place the raw news headlines file (news_data.csv) in the /data/raw/ directory.
+### **Task 1 — Exploratory Data Analysis (EDA)**
+- Investigated dataset structure, missing values, and basic statistics.
+- Visualized distributions of stock prices and news headlines.
+- Generated insights on news headline length, active publishers, and stock trends.
 
-Stock Data: Ensure the historical stock price data for the target tickers (stock_prices.csv) is also present in the /data/raw/ directory.
+### **Task 2 — Quantitative Analysis**
+- Loaded historical stock data from multiple CSVs automatically.
+- Calculated technical indicators using `TA-Lib`:
+  - Simple & Exponential Moving Averages (SMA, EMA)
+  - Relative Strength Index (RSI)
+  - MACD
+- Computed financial metrics using `PyNance`.
+- Visualized stock price trends and technical indicators.
 
-4. Running the Initial Analysis
+### **Task 3 — News Sentiment & Stock Correlation**
+- Performed sentiment analysis on news headlines using `TextBlob`.
+- Aggregated daily sentiment per stock.
+- Computed daily stock returns from closing prices.
+- Calculated Pearson correlation between daily sentiment and stock returns.
+- Created a single combined dashboard for all stocks, ideal for reports and presentations.
 
-To reproduce the EDA and initial analysis scripts, run:
+---
 
-python src/01_eda_news_data.py
-python src/02_topic_modeling.py
+## Key Features
 
+- Automated loading of all stock CSVs.
+- Sentiment analysis of financial news and correlation with stock movement.
+- Presentation-ready visualizations.
+- Clean, modular, and reproducible Jupyter notebooks.
 
- Report Structure
+---
 
-The final project report will follow a structured, professional format, covering:
+## 🛠 Tools & Libraries
 
-Executive Summary
+- **Python 3.11**
+- `pandas` — Data manipulation
+- `numpy` — Numerical computations
+- `matplotlib` & `seaborn` — Data visualization
+- `TA-Lib` — Technical analysis indicators
+- `PyNance` — Financial metrics
+- `TextBlob` & `nltk` — Sentiment analysis
 
-Detailed Business Objective
+---
 
-Key Findings from EDA and Initial Analysis
+## How to Run
 
-Methodology for Quantitative Analysis (Sentiment, TA, Alignment)
+1. Activate the virtual environment.
+2. Open Jupyter Notebook:
 
-Results of Correlation Testing
+```bash
+jupyter notebook
+```
 
-Final Model Roadmap
+3. Navigate to `notebooks/` and run notebooks in order:
+   1. `01_eda_analysis.ipynb`
+   2. `02_quantitative_analysis.ipynb`
+   3. `03_correlation_analysis.ipynb`
+
+---
+
